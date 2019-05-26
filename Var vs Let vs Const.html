@@ -1,0 +1,47 @@
+<head>
+    <title>Var vs Let Vs Const</title>
+</head>
+
+<h1>Var vs Let vs Const</h1>
+
+<h4>Important bits to understand</h4>
+
+<ul>
+    <li>
+        Declaration vs Initialization</br>
+        var d; = Declaration (creating a variable with undefinite)</br>
+        var d = "hello world"; = Initalization (Assigned a value after declaration)</br>
+    </li>
+</br>
+    <li>
+        Scope - Defines where variables and cuntions are accessible inside your program.</br>
+        Var = function scope, will not exist oustide of the function</br>
+        Let = block scope, available inside the block it created
+    </li>
+</br>
+    <li>
+        Hoisting - The idea of declaring a variable without a assigning a value</br>
+        Var = undefined when trying to access before it's declaration</br>
+        Let = reference error when access before it's declaration</br>
+        </br>
+        In JS, (particularly functions), all var items used will be initially declared</br>
+        with undefinined in the start before it is used/assigned a value</br>
+    </li>
+</br>
+    <li>
+        Const = pretty much same as Let EXCEPT:</br>
+        Let can be reassigned , const can't </br>
+        It is not exactly immutable, you can reassign a property or change</br>
+        certain aspects of the const object however you cannot redeclare it</br>
+    </li>
+
+<p>
+    In summary:</br>
+    So to recap, var is function scoped and if you try to use a variable declared</br>
+    with var before the actual declaration, you’ll just get undefined. const and</br>
+    let are blocked scoped and if you try to use variable declared with let or</br>
+    const before the declaration you’ll get a ReferenceError. Finally the difference</br>
+    between let and const is that once you’ve assigned a value to const, you can’t</br>
+    reassign it, but with let, you can.</br>
+</p>
+</ul>
