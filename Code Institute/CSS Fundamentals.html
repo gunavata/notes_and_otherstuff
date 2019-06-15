@@ -2,8 +2,6 @@
     <title>CSS Fundamentals</title>
 </head>
 
-<p>The irony here is that im using HTML for this</p>
-
 <h1>Contents of the fundamentals</h1>
 
 <ol>
@@ -35,23 +33,82 @@
         <p>Precendence of css styles = inline > embedded > external</p>
         <p>!important placed after value - forces that css to always be active/highest precedence (dont use this)</p>
     <li>CSS Rules</li>
+        <p>Inheritence - child will inherit everything from parent except what is declared</p>
+        <p>Can use inherit as a value on any CSS attribute</p>
     <li>Comments and font-family</li>
+        <p>/* like this */</p>
+        <p>Font family can be imported, when declared need to assign fallback default</p>
     <li>Working with Text</li>
+        <p>Measurement of units - Relative and Absolute</p>
+        <p>Relative depends on relation to object</p>
+        <p>Pixels - px</p>
+        <p>Em - em size = pixel size/16 or 16px / based on font size usually 16px</p>
+        <p>Em can sometimes cause design issues as multiple inheritence will alter it's default size</p>
+        <p>Rem - em but are consistent, does not inherit from parents</p>
+        <p>Percentage - %</p>
+        <p>Viewpoint width - vw / percentage of your viewport, adjusts accordingly</p>
+        <p>Viewpoint height - vh / same as above but for height</p>
     <li>Font Parameters</li>
+        <p>Font size - key values (medium, x-small, xx-small) or px</p>
+        <p>Font Weight - key values (bold, bolder, lighter) or 100-900 range</p>
     <li>Font Color</li>
+        <p>Color - Hexadecimal (#bada55), regb(255, 255, 255), keyword (blue, green, red)</p>
     <li>Font Position</li>
+        <p>text-align or vertical-align</p>
+        <p>text-shadow - shadow in horizontal direction, distance in vertical direction, blur effect and color</p>
     <li>Font Spacing</li>
+        <p>word-spacing</p>
+        <p>word-wrap - break-word or normal</p>
+        <p>word-break - break-all, keep-all or normal</p>
     <li>Letter Spacing</li>
+        <p>letter-spacing - usually used on site logos and headings</p>
+        <p>White-space - pre-wrap, nowrap, pre or pre-line</p>
     <li>Font Style</li>
+        <p>text-transform - capitalize, uppercase or lowercase</p>
+        <p>text-decoration - underline, overline, line-through or none</p>
+        <p>font-style - italic or normal</p>
     <li>The Box Model</li>
+        <p>Starting from outmost - Margin, Border, Padding (Content is the innermost untouched box)</p>
+        <p>padding - creates space between content and border</p>
     <li>Box Border and Margin</li>
+        <p>border - creates space between padding and margin</p>
+        <p>margin - creates space around elements</p>
     <li>Background Appearance</li>
+        <p>background-color - affects padding area</p>
+        <p>background-image - url('location'), can have multiple</p>
+        <p>background-repeat - repeat, repeat-y, repeat-x or no-repeat</p>
     <li>Background Positioning</li>
+        <p>background-size - contain, cover or measurement units (px, em, vw etc)</p>
+        <p>background-position - left, right, top, bottom or center (also can combine like top right)</p>
+        <p>Can also use measurement units for X and Y such as 16px 16px</p>
+        <p>background-clip - which part of the box model does background extend to</p>
     <li>Background Source</li>
+        <p>background-attachment - fixed or scroll / tells browser behaviour of bg</p>
+        <p>background-origin - where in box model bg begins</p>
+        <p>shorthand = bg-image bg-position / bg-size repeat-style bg-attachment bg-origin bg-clip bg-color</p>
     <li>Box Sizing</li>
+        <p>box-sizing - border-box / controls if border and padding is included in size of element</p>
     <li>Layout</li>
+        <p>display - block, inline or inline-block</p>
+        <p>div - Block level elements</p>
+        <p>span - inline elements</p>
     <li>Visibility</li>
+        <p>visibility - hidden(still there just invisible) or none (not there)</p>
     <li>Positioning</li>
+        <p>position - static(default)</p>
+        <p>position - relative(movement based on it's location statically)</p>
+        <p>position - absolute(not part of page flow, positioning based of closest ancestors, otherwise initial block)</p>
+        <p>position - fixed(not part of page flow, will always be displayed and is not moved</p>
     <li>Z-Index</li>
+        <p>z-index - number / controls the stacking order of elements (highest and latest declared is strongest)</p>
     <li>Layout Interactions</li>
+        <p>overflow - auto(scrollbar), scroll(either x or y), hidden or visible</p>
+        <p>overflow-x and overflow-y is same as above but only for either or</p>
+        <p>float - left or right / position element beside another element like microsoft word</p>
+        <p>clear - left, right or both / related to float, whether elements can be put next to it</p>
+        <p>Horizontal centering - auto left and right margin will centre any block level element</p>
+        <p>Centering inline-block elements - add text-align to the parent</p>
+        <p>Relative positioning is same as above</p>
+        <p>Absolute positioning elements we need to set left and right auto also</p>
+        <p>Vertical centering - transform translateY</p>
 </ol>
