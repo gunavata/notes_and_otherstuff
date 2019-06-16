@@ -2,6 +2,22 @@
     <title>Types of Tests</title>
 </head>
 
+<!--
+    TDD = Test driven development
+        test based implementation
+        instead of laying our functions as logic, think about user input
+        raw data
+    BDD = Behaviour driven development
+        focuses on behvaiour
+        behaviours then data
+
+    Possible js libraries for testing:
+    Jasmine.js
+    Qunit
+    Mocha.js
+    Intern
+-->
+
 <h1>Types of test</h1>
 
 <h4>Unit tests</h4>
@@ -9,6 +25,78 @@
     Ensure that individual components of the app work as expected. Assertions test the component API.</br>
     Should be - Dead Simple / Lightning fast / Good bug report</br>
 </p>
+
+<p>Good test failure bug reports include:</p>
+<ol>
+    <li>What were you testing?</li>
+        <p>'compose() should return a function'</p>
+        <p>The compose() function takes any number of stamps and produces a new stamp</p>
+    <li>What should it do?</li>
+        <p>What should the feature do?</p>
+        <p>What component aspect are you testing? -> In this case, output typeof from compose() function</p>
+        <p>test('what component aspect are we testing? (compose() output type)', assert => {'compose() should return a function'});</p>
+    <li>What was the output (Actual behaviour)?</li>
+    <li>What was the expected output (Expected behaviour)?</li>
+        <p>Basically equal() because it answers 'What is actual output?' and 'What is expected output?'</p>
+        <p>
+            const actual = 'Actual output' (typeof compose()); (Doubles up as how is this test reproduced)
+            const expected = 'Expected output' ('function');
+            assert.equal(actual, expected, 'compose() should return a function');
+            // How? Look at variable assignments
+            // What? Look at assertion's description
+        </p>
+    <li>How can it be reproduced?</li>
+        <p>Based on the code used to derive actual value</p>
+</ol>
+
+<h6>Unit Test Template</h6>
+
+<!--
+    import test from 'tape';
+
+    // For each unit test you write,
+    // answer these questions:
+    test('What component aspect are you testing?', assert => {
+      const actual = 'What is the actual output?';
+      const expected = 'What is the expected output?';
+
+      assert.equal(actual, expected,
+        'What should the feature do?');
+
+      assert.end();
+    });
+
+      Refactored date examples
+      <script src="prettydate.js"></script>
+
+      <script>
+      var results = {
+        total: 0,
+        bad: 0
+      };
+
+      function test(then, expected) {
+        results.total++;
+        var result = prettyDate("2008/01/28 22:25:00", then);
+       if (result !== expected) {
+          results.bad++;
+          console.log("Expected " + expected +
+            ", but was " + result);
+        }
+      }
+
+      test("2008/01/28 22:24:30", "just now");
+      test("2008/01/28 22:23:30", "1 minute ago");
+      test("2008/01/28 21:23:30", "1 hour ago");
+      test("2008/01/27 22:23:30", "Yesterday");
+      test("2008/01/26 22:23:30", "2 days ago");
+      test("2007/01/26 22:23:30", undefined);
+
+      console.log("Of " + results.total + " tests, " +
+        results.bad + " failed, " +
+        (results.total - results.bad) + " passed.");
+      </script>
+-->
 
 <h4>Integration tests</h4>
 
