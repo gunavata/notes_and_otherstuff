@@ -1,0 +1,135 @@
+<head>
+    <title>jQuery</title>
+</head>
+
+<h1>What is jQuery?</h1>
+<p>
+    Javascript library
+    Simplifies javascript programming
+    HTML/DOM manipulation
+    Effects and animations
+    AJAX
+    Utilities
+</p>
+
+<h4>Basic Syntax</h4>
+
+<p>$(selector).action()</p>
+<ul>
+    <li>$ = define/acces jQuery</li>
+    <li>(selector) = query or find HTML elements</li>
+    <li>action() = what to do on element</li>
+    <li>EX: $(document).ready(function() {jQuery methods here});</li>
+</ul>
+
+<p>Selectors work similiarly to CSS selectors with a few additions</p>
+<ul>
+    <li>$("*") = Select all element</li>
+    <li>this = select current HTML</li>
+    <li>[attr] = select all elements with that attribute</li>
+    <li>tr:even + tr:odd = select all even or odd tr elements</li>
+</ul>
+
+<p>It works on events (Firing or events i.e keypress event is fired)</p>
+<p>on() method attaches one or more event handlers to selected element</p>
+
+<h4>Some Effects</h4>
+<ul>
+    <li>hide(speed, cb)</li>
+    <li>toggle(speed, cb) = hide or unhide</li>
+    <li>fadeIn/Out(spd, cb)</li>
+    <li>fadeToggle(spd,cb) = hide or unhide</li>
+    <li>fadeTo(spd, opacity, cb)</li>
+    <li>slideDown/Up(spd, cb)</li>
+    <li>slideToggle(spd, cb) = hide or unhide</li>
+    <li>animate({params}, spd, cb)</li>
+        <p>params include what properties to alter i.e left: 250px</p>
+        <p>params can include multiple properties i.e left: '250px', opacity: '0.5'</p>
+        <p>Relative values = += or +- i.e height: '+=150px';</p>
+        <p>Pre definied values = specify property animation value i.e height: 'togglt'</p>
+        <p>Follows queue functionality</p>
+    <li>stop(stopAll, goToEnd) = both optional, stopAll cancels all animation, goToEnd specifies if finish animation first or not</li>
+    <li>Callback functions = waits for code to finish before proceed i.e hide("slow", function(){}) </li>
+    <li>Method Chaining = $(element).css(code).slideUp(slow).slideDown(fast)</li>
+</ul>
+
+<h4>HTML jQuery</h4>
+<p>DOM Manipulation</p>
+<p>Get and Set Content</p>
+<ul>
+    <li>text(content) = sets or returns text content of selected element</li>
+    <li>html(content) = sets or returns content of selected elements with HTML markup</li>
+    <li>val(content) = sets or returns value of form fields</li>
+    <li>attr(target, what to change) = req + opt / sets or return attribute values</li>
+        <p>The above elements can accept cb i.e text(function(index of current element, original value)</p>
+    <li>append(content) = insert content at the end</li>
+    <li>prepend(content) = insert content at beginning</li>
+    <li>after(content) = insert content after selected element</li>
+    <li>before(content) = insert content before selected element</li>
+        <p>Selected content is put before i.e $("img").after()</p>
+        <p>All four methods above can take multiple elements in order to chain i.e append(txt1, tx2, txt3)</p>
+    <li>remove(filter) = filter rules which to remove / removes selected and child</li>
+    <li>empty() = removes only child</li>
+    <li>addClass(className) = adds one or more class to selected elements</li>
+    <li>removeClass(className) = removes one or more class from selected elements</li>
+    <li>toggleClass(className) = toggles between adding or removing class</li>
+    <li>css("propertyname", "value(if setting") = sets or returns style attribute</li>
+    <li>
+        Dimensions
+        <ol>
+            <li>width()</li>
+            <li>height()</li>
+                <p>Content window</p>
+            <li>innerWidth()</li>
+            <li>innerHeight()</li>
+                <p>Content + Padding</p>
+            <li>outerWidth()</li>
+            <li>outerHeight()</li>
+                <p>Content + Padding + Border (true value = w/Margin)</p>
+        </ol>
+    </li>
+</ul>
+
+<h4>Traversing within the DOM</h4>
+<p>Move through/find/select html based on their relation</p>
+<p>Start with selector and move through DOM tree via ancestors, descendants, siblings or current element</p>
+
+<ul>
+    <li>
+        Going upwards
+        <ul>
+            <li>parent() = direct parent</li>
+            <li>parents(filter) = filter out only these / all parents</li>
+            <li>parentsUntil(target) = parents between selector and target</li>
+        </ul>
+    </li>
+    <li>
+        Going Downwards
+        <ul>
+            <li>children(filter) = filter sets a criteria / all direct children, fetches all of them</li>
+            <li>find() = look for all descendant elements down to the last</li>
+        </ul>
+    </li>
+    <li>
+        Going Sideways
+        <ul>
+            <li>siblings(filter) = filter targes specific / returns all siblings</li>
+            <li>next() = returns next sibling</li>
+            <li>nextAll() = returns all next siblings</li>
+            <li>nextUntil(target) = returns all next siblings until target</li>
+            <li>prev()</li>
+            <li>prevAll()</li>
+            <li>prevUntil()</li>
+        </ul>
+    </li>
+    <li>
+        Filtering
+        <ul>
+            <li>first() = selects first found selector</li>
+            <li>last() = selects last found selector</li>
+            <li>eq(index) = selects index number selector</li>
+            <li>filter(target) = selects all true selector</li>
+            <li>not(target) = opposite of filter()</li>
+        </ul>
+    </li>
+</ul>
