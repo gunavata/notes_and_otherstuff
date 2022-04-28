@@ -9,9 +9,9 @@ OOP Concepts
         * abstract class AbstractHorse which implements Horse Interface and has horse movement. Later used for Pegasus where it needs both horse and bird movement.
 * Polymorphism
     * Many forms; Same name but different functionality - Promotes reusability
-      * Method overloading = o
+      * Method overloading = Same name different parameters.
         * getDog(String name) VS getDog(String name, int age)
-      * Method overridding = o
+      * Method overridding = Same name and params, child overrides implementation from parent
         * getDog(String name) from parent, child overrides same method name to do something else
 * Inheritence - Composition
     * Both promotes reusability
@@ -29,3 +29,32 @@ OOP Concepts
     * Combine Data and Methods into one class
     * Hides/protects the implementation inside the class - Promotes security/reusability
       * Private and public fields with getters and setters (Read or write only)
+      
+SOLID Principle
+* Single Responsibility
+   * A class should have one and only one reason to change, meaning that a class should have only one job.
+      * getDogInfo(String id) which returns a nice String of dog info
+         * Gets the Dog object, gets the name of that dog, gets the age and convert it from dog years to human years, does a check if dog has
+           registration tags/vaccination, concatenates the texts together.
+         * Does a lot in one shot, hard to make changes/identify where changes need to be made (Non-extensible)
+      * Instead of that, should seperate it to do smaller more succint jobs
+         * getDog(String name), calculateAge(int age), checkTags(Dog dog), return constructInfo(List<String> dogInfos)
+* Open Closed
+   * Objects or entities should be open for extension but closed for modification.
+      * Assuming calculateAge is a stand alone method used to calculate all animals age
+         * Dog is x 15, horse is x 6.5 etc, this causes many if-else or switch statements
+         * Consider using strategy pattern
+            * Interface called AgeCalculator with calculate method. Two implementation HorseCalculator and DogCalculator.
+            * Instantiate Horse with HorseCalculator and Dog with DogCalculator.
+* Liskov Substitution
+* Interface Segregation
+   * A client should never be forced to implement an interface that it doesn’t use/depend on methods they don't need.
+      * Animal interface that has walk(), run(), fly() and swim().
+         * Ducks can override and use all those methods to do something.
+         * Beavers cannot fly. Giraffes cannot swim or fly. Fish cannot walk or run.
+      * Seperate those into it's own interface LandMovement(), AirMovement(), SeaMovement()
+         * Ducks implement all of it, Beavers implement Land and Air etc.
+         * The interface can be further refined by combining common ones and inheriting that instead.
+* Dependency Inversion
+   * Entities must depend on abstractions, not on concretions. High level should not dependant on low level, depend on abstractions instead.
+      * 
