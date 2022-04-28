@@ -1,0 +1,31 @@
+Quick notes:
+
+OOP Concepts
+* Abstraction
+    * Hide internal workings, expose only what is necessary - Promotes security
+      * Interface = Blueprint of class with abstract methods only. A promise that whoever inherits him must implement.
+        * interface class Animal with methods makeNoise() and sleep(
+      * Abstract = Blueprint of class with abstract or concrete methods. Part of it already has implementation.
+        * abstract class AbstractHorse which implements Horse Interface and has horse movement. Later used for Pegasus where it needs both horse and bird movement.
+* Polymorphism
+    * Many forms; Same name but different functionality - Promotes reusability
+      * Method overloading = o
+        * getDog(String name) VS getDog(String name, int age)
+      * Method overridding = o
+        * getDog(String name) from parent, child overrides same method name to do something else
+* Inheritence - Composition
+    * Both promotes reusability
+    * Inheritence = is a relationship. Child inherits properties of the parent
+    * Subclass(Child) & Superclass (Parent)
+      * Single inheritence = A -> B</br>
+      * Multilevel inheritence = A -> B -> C</br>
+      * Hierarchical inheritence = A -> B && A -> C && A -> D</br>
+      * Hybrid inheritence = Mix of 2 or more of the above</br>
+    * Composition = has a relationship.
+      * Contained as a property instead of being extended
+        * Dog is an Animal and Dog has a Snout (Dog is not a Snout)
+        * Car is an Autombile and Car has an Engine (Car is not an Engine)
+* Encapsulation
+    * Combine Data and Methods into one class
+    * Hides/protects the implementation inside the class - Promotes security/reusability
+      * Private and public fields with getters and setters (Read or write only)
