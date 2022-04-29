@@ -1,5 +1,6 @@
 Quick notes:
 
+
 OOP Concepts
 * Abstraction
     * Hide internal workings, expose only what is necessary - Promotes security
@@ -30,6 +31,7 @@ OOP Concepts
     * Hides/protects the implementation inside the class - Promotes security/reusability
       * Private and public fields with getters and setters (Read or write only)
       
+      
 SOLID Principle
 * Single Responsibility
    * A class should have one and only one reason to change, meaning that a class should have only one job.
@@ -56,5 +58,18 @@ SOLID Principle
          * Ducks implement all of it, Beavers implement Land and Air etc.
          * The interface can be further refined by combining common ones and inheriting that instead.
 * Dependency Inversion
-   * Entities must depend on abstractions, not on concretions. High level should not dependant on low level, depend on abstractions instead.
-      * 
+   * Entities must depend on abstractions, not on concretions. High level should not depend on low level, depend on abstractions instead.
+      * CanteenService class with a getPedigree() which returns DogFood. Method is tightly coupled with the brand Pedigree (What if we change to Royal Canine?).
+      * Instead have an interface Food to getDogFood() and then implement it into a PedgireeFood class which is subsequently used in CanteenService.
+      
+      
+Design Patterns
+* Chain of Responsibility
+* Strategy
+* Publish Subscriber
+* Factory
+
+
+Database
+* MYSQL
+* NOSQL
